@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Menuiserie Design 24</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+  <style>
+    .bleu { color: #0055A4; }
+    .rouge { color: #EF4135; }
+    .bg-bleu { background-color: #0055A4; }
+    .bg-rouge { background-color: #EF4135; }
+    #map { height: 400px; width: 100%; margin-top: 20px; border-radius: 12px; }
+  </style>
+</head>
+<body class="bg-white text-gray-800">
+
+  <header class="bg-bleu shadow-md fixed top-0 left-0 w-full z-50">
+    <div class="max-w-7xl mx-auto px-6 py-4 flex justify-between items-center">
+      <h1 class="text-2xl font-bold text-white">Menuiserie Design 24</h1>
+      <nav class="space-x-6 text-lg text-white">
+        <a href="#accueil" class="hover:text-rouge">Accueil</a>
+        <a href="#produits" class="hover:text-rouge">Produits</a>
+        <a href="#services" class="hover:text-rouge">Services</a>
+        <a href="#contact" class="hover:text-rouge">Contact</a>
+      </nav>
+    </div>
+  </header>
+
+  <section id="accueil" class="pt-32 pb-20 bg-gradient-to-r from-blue-600 to-red-500 text-white text-center">
+    <h2 class="text-4xl font-extrabold mb-4">Artisan Français • Menuiserie Professionnelle</h2>
+    <p class="text-xl max-w-2xl mx-auto mb-4">Artisan depuis 20 ans</p>
+    <p class="text-xl max-w-2xl mx-auto">Poêles à granulés, climatisations, volets roulants, volets battants, fenêtres, portes, portes de garage, portails et clôtures extérieures.</p>
+  </section>
+
+  <section id="produits" class="py-20 max-w-7xl mx-auto px-6">
+    <h3 class="text-3xl font-bold text-center mb-12 bleu">Nos Produits</h3>
+    <div class="grid md:grid-cols-3 gap-8">
+      <div class="bg-gray-200 p-6 rounded-xl shadow-md">
+        <h4 class="text-xl font-bold mb-2 bleu">Poêles à Granulés</h4>
+        <p>Installation et fourniture de poêles performants et économiques.</p>
+      </div>
+      <div class="bg-gray-200 p-6 rounded-xl shadow-md">
+        <h4 class="text-xl font-bold mb-2 bleu">Climatisations</h4>
+        <p>Systèmes réversibles pour un confort optimal toute l'année.</p>
+      </div>
+      <div class="bg-gray-200 p-6 rounded-xl shadow-md">
+        <h4 class="text-xl font-bold mb-2 bleu">Volets Roulants</h4>
+        <p>Volets motorisés, sécurisés et adaptés à vos besoins.</p>
+      </div>
+      <div class="bg-gray-200 p-6 rounded-xl shadow-md">
+        <h4 class="text-xl font-bold mb-2 bleu">Fenêtres</h4>
+        <p>Fenêtres PVC, alu ou bois, isolation et durabilité garanties.</p>
+      </div>
+      <div class="bg-gray-200 p-6 rounded-xl shadow-md">
+        <h4 class="text-xl font-bold mb-2 bleu">Portes</h4>
+        <p>Portes d'entrée robustes, esthétiques et sécurisées.</p>
+      </div>
+      <div class="bg-gray-200 p-6 rounded-xl shadow-md">
+        <h4 class="text-xl font-bold mb-2 bleu">Portails Extérieurs</h4>
+        <p>Portails motorisés ou manuels, sur mesure.</p>
+      </div>
+      <div class="bg-gray-200 p-6 rounded-xl shadow-md">
+        <h4 class="text-xl font-bold mb-2 bleu">Volets Battants</h4>
+        <p>Volets traditionnels ou sur mesure, durables et esthétiques.</p>
+      </div>
+      <div class="bg-gray-200 p-6 rounded-xl shadow-md">
+        <h4 class="text-xl font-bold mb-2 bleu">Portes de Garage</h4>
+        <p>Portes motorisées ou manuelles, sécurisées et adaptées à votre garage.</p>
+      </div>
+      <div class="bg-gray-200 p-6 rounded-xl shadow-md">
+        <h4 class="text-xl font-bold mb-2 bleu">Clôtures Extérieures</h4>
+        <p>Clôtures robustes, modernes ou traditionnelles, sur mesure.</p>
+      </div>
+    </div>
+  </section>
+
+  <section id="services" class="py-20 bg-gray-200">
+    <div class="max-w-5xl mx-auto px-6 text-center">
+      <h3 class="text-3xl font-bold mb-8 bleu">Nos Services</h3>
+      <p class="text-lg leading-relaxed">Installation • Rénovation • Maintenance • Dépannage<br>
+      Artisan basé à <strong>Boulazac</strong>, nous intervenons dans toute la région.</p>
+      <p class="mt-4"><strong>Adresse :</strong><br>27 rue René Desmaison<br>24750 Boulazac Isle Manoire</p>
+      <p class="mt-2 text-sm">KBIS : 942 724 238 | Assurance Décennale n°0000022299860304 chez AXA</p>
+    </div>
+  </section>
+
+  <section id="contact" class="py-20 max-w-5xl mx-auto px-6">
+    <h3 class="text-3xl font-bold text-center mb-12 bleu">Contact</h3>
+    <p class="text-center text-xl mb-10">📞 Téléphone : <strong>05 53 09 11 89</strong></p>
+
+    <form action="https://formspree.io/f/mdkbkdwz" method="POST" class="bg-white p-8 rounded-xl shadow-md grid gap-6">
+      <input type="text" name="name" placeholder="Votre nom" class="border p-3 rounded-md" required />
+      <input type="email" name="_replyto" placeholder="Votre email" class="border p-3 rounded-md" required />
+      <textarea name="message" placeholder="Votre message" class="border p-3 rounded-md" rows="5" required></textarea>
+      <button type="submit" class="bg-bleu hover:bg-rouge text-white py-3 rounded-md font-semibold">Envoyer</button>
+    </form>
+
+    <!-- CARTE INTERACTIVE -->
+    <div id="map"></div>
+    <script>
+      var map = L.map('map').setView([45.176405, 0.771276], 17);
+      L.tileLayer('https://{s}.tile.openstreetmap.fr/osmfr/{z}/{x}/{y}.png', {
+        maxZoom: 20,
+        attribution: '© OpenStreetMap France',
+      }).addTo(map);
+      L.marker([45.176405, 0.771276]).addTo(map)
+        .bindPopup('<b>Menuiserie Design 24</b><br>27 rue René Desmaison<br>24750 Boulazac Isle Manoire')
+        .openPopup();
+    </script>
+  </section>
+
+  <footer class="bg-bleu text-white py-6 text-center">
+    © 2025 Menuiserie Design 24 — Tous droits réservés
+  </footer>
+
+</body>
+</html>
